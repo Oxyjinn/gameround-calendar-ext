@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GameRound Event Creator",
+  "version": "1.0",
+  "description": "Extracts playtest details from GameRound and creates Google Calendar events directly on click.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://gameround.co/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "commands": {
+    "create-calendar-event": {
+      "suggested_key": {
+        "default": "Alt+Shift+G",
+        "mac": "Command+Shift+G"
+      },
+      "description": "Extract data and create calendar event"
+    }
+  }
+}
